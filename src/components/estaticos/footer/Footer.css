@@ -1,0 +1,12 @@
+.top-footer{
+    height: 45px;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.cop{
+    font-size: 12px;
+    display:flex;
+    justify-content: center;
+}
