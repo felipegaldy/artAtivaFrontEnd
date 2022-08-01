@@ -1,0 +1,22 @@
+.navbar-pai{
+    background: transparent;
+    color: #222;
+
+}
+
+.navbar-tool{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icones{
+    padding: 5px;
+}
