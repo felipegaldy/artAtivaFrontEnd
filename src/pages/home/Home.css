@@ -1,0 +1,21 @@
+.box2{
+    margin:32px;
+}
+
+.container-produtos{
+    border: 2px solid black;
+    max-width: 1120px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-produto{
+    border: 2px solid black;
+}
+.card-produto > img {
+    width: 50px!important;
+}
+
+.img-produto{
+    width: 50px !important;
+}
