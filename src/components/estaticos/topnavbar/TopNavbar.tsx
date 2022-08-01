@@ -12,7 +12,7 @@ function TopNavbar() {
       <AppBar position="static" className="top-nav">
         <Toolbar className="toolbar">
           <Box>  
-            <Typography variant="h6" className="title">
+            <Typography className="title">
                 <WhatsAppIcon className="iconeWhats" /> Fale conosco via whatsapp
             </Typography>
           </Box>
