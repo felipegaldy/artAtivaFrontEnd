@@ -21,12 +21,11 @@ function App() {
         <Route path="/sobreNos" element={<SobreNos/>}/>
       
       </Routes>
-        <Footer/>
       <FooterNav />
+      <Footer/>
     </Router>
       
       
-      <Footer />
     </>
 
   );
