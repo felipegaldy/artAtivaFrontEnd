@@ -18,4 +18,11 @@
 
 .img-produto{
     width: 50px !important;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center{
+    text-align: center;
 }
