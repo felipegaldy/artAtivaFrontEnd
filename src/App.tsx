@@ -21,7 +21,6 @@ function App() {
         <Route path="/sobreNos" element={<SobreNos/>}/>
       
       </Routes>
-        <Footer/>
       <FooterNav />
     </Router>
       
