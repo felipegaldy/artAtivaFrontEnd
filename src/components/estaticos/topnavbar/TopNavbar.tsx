@@ -17,7 +17,7 @@ function TopNavbar() {
             </Typography>
           </Box>
           <Box>
-            <Button color="inherit">Login</Button> | <Button color="inherit">Cadastrar</Button>
+            <Button color="inherit"><a href="/login"> Login</a></Button> | <Button color="inherit">Cadastrar</Button>
           </Box>
         </Toolbar>
       </AppBar>

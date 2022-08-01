@@ -20,7 +20,10 @@ function Navbar() {
         <Toolbar className="navbar-tool">
           <Box className="logo">
           <Typography className="" variant="h5" noWrap>
+           <a href="/">
+
             LOGO
+           </a>
           </Typography>
           </Box>
           <Box className="box2">
