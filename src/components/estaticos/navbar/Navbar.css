@@ -1,7 +1,7 @@
 .navbar-pai{
-    background: transparent;
-    color: #222;
-
+    background: transparent!important;
+    color: #222!important;
+    margin-top: 10px;
 }
 
 .navbar-tool{
@@ -19,4 +19,17 @@
 }
 .icones{
     padding: 5px;
+}
+
+.botoes-nav{
+    display: flex;
+    justify-content: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    width: 100%;
+}
+.botao{
+    margin-top: 45px!important;
+    margin-bottom: 28px!important;
+    margin-right: 56px!important;
 }

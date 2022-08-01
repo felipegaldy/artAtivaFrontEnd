@@ -31,9 +31,21 @@ function Navbar() {
             <ShoppingCartIcon className="icones" fontSize="large" color="primary" />
           </Box>
         </Toolbar>
-        <Box>
-          <Button variant="contained" color="primary">
-            Primary
+        <Box className="botoes-nav">
+          <Button variant="contained"  className="botao">
+            Roupas
+          </Button>
+          <Button variant="contained"  className="botao">
+            Decoração
+          </Button>
+          <Button variant="contained"  className="botao">
+            Destaques
+          </Button>
+          <Button variant="contained"  className="botao">
+            Para Casa
+          </Button>
+          <Button variant="contained"  className="botao">
+            Presentes
           </Button>
         </Box>
       </AppBar>
