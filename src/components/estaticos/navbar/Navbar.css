@@ -1,35 +1,61 @@
-.navbar-pai{
-    background: transparent!important;
-    color: #222!important;
-    margin-top: 10px;
-}
-
-.navbar-tool{
+.top-app-bar-container{
+    height: 35px;
+    border-radius: 0px 0px 25px 25px;
     display: flex;
-    justify-content: space-between;
-    max-width: 1120px;
-    margin: 0 auto;
-    width: 100%;
+    justify-content: center;
+    align-items: center;   
 }
-
-.box2{
+.top-toolbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1120px;
 }
-.icones{
-    padding: 5px;
+.iconeWhats{
+    margin-right: 5px;
+    font-size: 14px!important;
+}
+.botoes-top{
+    font-size: 12px!important;
+    color: white!important;
 }
 
-.botoes-nav{
+/* 2 parte do navbar */
+.app-bar-container{
     display: flex;
     justify-content: center;
-    max-width: 1120px;
-    margin: 0 auto;
-    width: 100%;
+    align-items: center; 
+    /* background-color: aliceblue!important;
+    color: #222!important; */
 }
-.botao{
-    margin-top: 10px!important;
-    margin-bottom: 28px!important;
-    margin-right: 56px!important;
+.header-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1120px;
+}
+
+.icones{
+    margin-right: 25px;
+    margin-left: 5px;
+}
+
+.nav-botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1120px;
+    margin-bottom: 32px;
+}
+.botao-nav{
+    border: 2px solid #D9D9D9!important;
+    border-radius: 20px!important;
+    width: 135px!important;
+    height: 30px!important;
 }
