@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Navbar() {
   return (
     <>
-      <AppBar position="static" className="top-app-bar-container">
+      <AppBar position="static"  className="top-app-bar-container">
         <Toolbar className="top-toolbar">
           <Box>
             <Button className="texto-whats botoes-top">

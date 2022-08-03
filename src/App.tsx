@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
-import FooterNav from './components/estaticos/footernav/FooterNav';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -18,7 +17,6 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/sobreNos" element={<SobreNos/>}/>
       </Routes>
-      <FooterNav />
       <Footer/>
     </Router>
       
