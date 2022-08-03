@@ -1,0 +1,21 @@
+.grid-login-container{
+    margin: 10px!important;
+}
+.login-container{
+    margin: 10px auto;
+}
+
+.login-box{
+    width: 600px;
+    height: 400px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 32px;
+}
+
+.botao-login{
+    width: 135px!important;
+    height: 30px!important;
+    border-radius: 25px!important;
+}

@@ -9,6 +9,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Search = styled("div")(({ theme }) => ({
@@ -64,9 +65,11 @@ function Navbar() {
             </Button>
           </Box>
           <Box>
+            <Link to="/login" className="text-decorator-none cursor">
             <Button className="botoes-top" color="inherit">
               Login
-            </Button>{" "}
+            </Button>
+            </Link>{" "}
             |{" "}
             <Button className="botoes-top" color="inherit">
               Cadastrar
