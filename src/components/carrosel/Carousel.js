@@ -25,12 +25,7 @@ function Carrosel() {
   };
 
   return (
-    <div className="App">
-      <div className="controls-wrapper">
-        <button onClick={removeItem}>Remove Item</button>
-        <button onClick={addItem}>Add Item</button>
-      </div>
-      <hr className="seperator" />
+    <div className="App carrosel">
       <div className="carousel-wrapper">
         <Carousel breakPoints={breakPoints}>
           {items.map((item) => (

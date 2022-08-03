@@ -31,6 +31,20 @@
     /* background-color: aliceblue!important;
     color: #222!important; */
 }
+.search{
+    margin-right: 32px;
+}
+.box-botoes-sobrenos-contato{
+    max-width: 1120px;
+    width: 100%;
+    margin-top: -10px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+.botoes-sobrenos-contato {
+    color: #222!important;
+}
 .header-toolbar{
     display: flex;
     justify-content: space-between;
@@ -43,6 +57,7 @@
 .icones{
     margin-right: 25px;
     margin-left: 5px;
+    font-size: 36px!important;
 }
 
 .nav-botoes{
