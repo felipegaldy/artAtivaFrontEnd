@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Box, Typography, Button } from "@mui/material";
 import './Home.css';
 import { Paper } from "@material-ui/core";
-import Carrosel from "../../components/carrosel/Carrosel";
+import Carrosel from "../../components/carrosel/Carousel";
 import CardProduto from "../../components/cardproduto/CardProduto";
 
 
@@ -12,7 +12,7 @@ function Home() {
     
       <Grid container spacing={3} columns={12} className="home-container">
         <Grid item xs={12}>
-          <Carrosel />
+          <Carrosel/>
         </Grid>
         <Grid item xs={12} className="title-container">
           <hr></hr>
