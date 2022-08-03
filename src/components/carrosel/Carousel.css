@@ -1,20 +1,13 @@
-.App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .controls-wrapper {
+.carrosel-container{
+    max-width: 1120px;
+    margin: 0 auto!important;
+    height: 320px!important;
+    margin-top: -50px!important;
+}
+
+.img-carrosel{
+    border-radius: 25px 25px 25px 25px!important;
     width: 100%;
-  }
-  
-  .carousel-wrapper {
-    width: 100%;
-  }
-  
-  .rec-carousel-item:focus {
-    outline: none;
-    box-shadow: inset 0 0 1px 0px violet;
-  }
-  
+    height: auto;
+    object-fit: cover;
+}

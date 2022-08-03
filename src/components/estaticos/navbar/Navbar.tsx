@@ -104,7 +104,7 @@ function Navbar() {
         </Toolbar>
         <Box className="box-botoes-sobrenos-contato">
             <Link to="/sobrenos" className="text-decorator-none cursor">
-            <Button className="botoes-top botoes-sobrenos-contato" color="inherit">
+            <Button className="botoes-top botoes-sobrenos-contato" variant="text" >
               Quem somos
             </Button>
             </Link>{" "}

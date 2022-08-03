@@ -1,39 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Carousel from "react-elastic-carousel";
-import Item from "./Item";
 import "./Carousel.css";
-
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 }
-];
+import { Grid } from "@mui/material";
 
 function Carrosel() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-
-  const addItem = () => {
-    const nextItem = Math.max(1, items.length + 1);
-    setItems([...items, nextItem]);
-  };
-
-  const removeItem = () => {
-    const endRange = Math.max(0, items.length - 1);
-    setItems(items.slice(0, endRange));
-  };
+  var items = [
+    {
+      img: "https://maisarteblog.files.wordpress.com/2016/06/panorc3a2mica-3.jpg?w=1680",
+    },
+    {
+      img: "https://static.todamateria.com.br/upload/oq/ue/o-que-sao-artes-visuais-og.jpg",
+    },
+    {
+      img: "https://artout.com.br/wp-content/uploads/2019/01/Arte-Contempor%C3%A2nea-3.jpg",
+    },
+  ];
 
   return (
-    <div className="App carrosel">
-      <div className="carousel-wrapper">
-        <Carousel breakPoints={breakPoints}>
+    <>
+
+        <Carousel itemsToShow={1} enableAutoPlay={true} autoPlaySpeed={3000} showArrows={true} className="carrosel-container">
           {items.map((item) => (
-            <Item key={item}>{item}</Item>
+            <>
+              <img className="img-carrosel" src={item.img} alt="Item" />
+            </>
           ))}
         </Carousel>
-      </div>
-    </div>
+
+    </>
   );
 }
 

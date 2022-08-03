@@ -44,6 +44,7 @@
 }
 .botoes-sobrenos-contato {
     color: #222!important;
+    border-radius: 25px!important;
 }
 .header-toolbar{
     display: flex;
