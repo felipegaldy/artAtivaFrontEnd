@@ -30,7 +30,7 @@ function CardProduto() {
         <Button size="small" color="primary">
           Comprar
         </Button>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" className="preco">
             R$ 100,00
         </Typography>
       </CardActions>
