@@ -13,7 +13,7 @@ function Login() {
         alignItems="center"
         className="grid-login-container"
       >
-        <Paper elevation={3} className="login-container">
+
         <Box paddingX={20} className="login-box">
           <form>
             <Typography
@@ -51,7 +51,7 @@ function Login() {
               </Link>
             </Box>
           </form>
-          <Box display="flex" justifyContent="center" marginTop={2}>
+          <Box display="flex" justifyContent="center" marginTop={2} className="text-cadastra-se">
             <Box marginRight={1}>
               <Typography variant="subtitle1" gutterBottom align="center">
                 Não tem uma conta?
@@ -69,7 +69,6 @@ function Login() {
             </Link>
           </Box>
         </Box>
-        </Paper>
       </Grid>
     </>
   );
