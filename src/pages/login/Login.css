@@ -12,10 +12,16 @@
     font-weight: 400;
     font-size: 32px;
     margin: 32px;
+    border: #9e9e9e 2px solid;
+    border-radius: 20px;
 }
 
 .botao-login{
     width: 135px!important;
     height: 30px!important;
     border-radius: 25px!important;
+}
+
+.login-title{
+    margin-top: 32px!important;
 }

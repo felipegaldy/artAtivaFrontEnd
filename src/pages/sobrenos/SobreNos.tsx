@@ -54,7 +54,7 @@ function SobreNos() {
           />
           <Box className="card-fulano-text">
             <Button variant="text" className="botao-nav">
-              Fulano
+              Felipe Silveira
             </Button>
             <Box className="parte-texto-icones">
               <Typography
