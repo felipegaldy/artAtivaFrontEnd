@@ -72,9 +72,11 @@ function Navbar() {
             </Button>
             </Link>{" "}
             |{" "}
+            <Link to="/cadastrousuario" className="text-decorator-none cursor">
             <Button className="botoes-top" color="inherit">
               Cadastrar
             </Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>
