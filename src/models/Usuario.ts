@@ -4,7 +4,7 @@ interface Usuario {
     usuario: string;
     senha: string;
     foto: string;
-    datadenascimento: string;
+    dataNascimento: string;
 }
 
-export default Usuario;
+export default Usuario; 

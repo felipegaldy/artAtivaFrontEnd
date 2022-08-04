@@ -4,8 +4,8 @@ interface UserLogin {
     usuario: string;
     senha: string;
     foto: string;
-    datadenascimento: string;
+    dataNascimento: string;
     token?: string | null;
 }
 
-export default UserLogin;
+export default UserLogin; 
