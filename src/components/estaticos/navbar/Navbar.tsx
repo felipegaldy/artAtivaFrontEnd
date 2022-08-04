@@ -14,7 +14,8 @@ import "./Navbar.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: `25px`,
+  border: `1px solid ${theme.palette.grey[800]}`,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -88,18 +89,30 @@ function Navbar() {
           >
             LOGO
           </Typography>
-          <Search>
+          <Search className="search">
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Buscar..."
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
+          {/*icones de login e shopcart */}
           <PersonIcon className="icones" />
           <ShoppingCartIcon className="icones" />
         </Toolbar>
+        <Box className="box-botoes-sobrenos-contato">
+            <Link to="/sobrenos" className="text-decorator-none cursor">
+            <Button className="botoes-top botoes-sobrenos-contato" variant="text" >
+              Quem somos
+            </Button>
+            </Link>{" "}
+            |{" "}
+            <Button className="botoes-top botoes-sobrenos-contato" color="inherit">
+              Contato
+            </Button>
+          </Box>
         <Box className="nav-botoes">
           <Button variant="text" className="botao-nav">Roupas</Button>
           <Button variant="text" className="botao-nav">Decoração</Button>

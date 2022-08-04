@@ -19,7 +19,7 @@ function SobreNos() {
         </Grid>
         <Box className="card-fulano">
           <img
-            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200"
+            src="https://avatars.githubusercontent.com/u/99551212?v=4"
             alt="avatar"
             className="avatar"
           />
@@ -54,7 +54,7 @@ function SobreNos() {
           />
           <Box className="card-fulano-text">
             <Button variant="text" className="botao-nav">
-              Felipe Silveira
+              Felipe
             </Button>
             <Box className="parte-texto-icones">
               <Typography
