@@ -51,9 +51,14 @@ hr {
 .redessociais{
     display: flex;
     justify-content: flex-end!important;
-    margin-right: 20px;
+    margin-right: 2px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
+a{
+    text-decoration: none !important;
+}
 .card-fulano2{
     width: 100%;
     padding: 10px;
@@ -62,4 +67,8 @@ hr {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+}
+
+.footer-icon2 {
+    margin-right: 10px!important;
 }
