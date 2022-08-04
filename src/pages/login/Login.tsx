@@ -68,6 +68,7 @@ function Login() {
               Login
             </Typography>
             <TextField
+            value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="usuario"
               label="Digite seu email"
               variant="outlined"
@@ -76,6 +77,7 @@ function Login() {
               fullWidth
             />
             <TextField
+            value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
               id="senha"
               label="Senha"
               variant="outlined"
