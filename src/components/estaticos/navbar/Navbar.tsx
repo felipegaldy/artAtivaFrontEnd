@@ -102,14 +102,16 @@ if(token === ""){
  {/* PARTE 2 DO HEADER COMEÇA AQUI*/}
  <AppBar position="static" className="app-bar-container" color="inherit">
    <Toolbar className="header-toolbar">
+   <Link to="/home" className="text-decorator-none cursor">
      <Typography
        variant="h6"
        noWrap
        component="div"
        sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
      >
-       LOGO
+      LOGO
      </Typography>
+      </Link>
      <Search className="search">
        <SearchIconWrapper>
          <SearchIcon />
@@ -180,6 +182,7 @@ if(token === ""){
 {}
 <AppBar position="static" className="app-bar-container" color="inherit">
   <Toolbar className="header-toolbar">
+  <Link to="/home" className="text-decorator-none cursor">
     <Typography
       variant="h6"
       noWrap
@@ -188,6 +191,7 @@ if(token === ""){
     >
       LOGO
     </Typography>
+    </Link>
     <Search className="search">
       <SearchIconWrapper>
         <SearchIcon />
