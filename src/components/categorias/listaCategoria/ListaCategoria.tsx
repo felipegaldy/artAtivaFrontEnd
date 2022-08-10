@@ -34,7 +34,7 @@ function ListaCategoria() {
     }
   });
   }
-
+ 
   React.useEffect(() => {
     getTemas();
   } , [categorias.length]);
