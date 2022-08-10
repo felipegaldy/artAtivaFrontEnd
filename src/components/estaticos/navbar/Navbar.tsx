@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       },
     },
   },
-}));
+});
 
 
 function Navbar() {
