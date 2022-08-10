@@ -58,14 +58,14 @@ function ListaCategoria() {
           </CardContent>
           <CardActions>
             <Box className='box-tema-botoes' mb={1.5} >
-              <Link to={`/formularioTema/${categoria.id}`} className="text-decorator-none">
+              <Link to={`/cadastrocategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="botao-tema botao-atualizar" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/deletarTema/${categoria.id}`} className="text-decorator-none">
+              <Link to={`/deletarcategoria/${categoria.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="botao-tema " size='small' color="secondary">
                     deletar
