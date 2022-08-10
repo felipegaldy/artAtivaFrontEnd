@@ -1,21 +1,7 @@
-import { Action } from "./tokens/actions";
+import { createStore } from "redux";
+import { tokenReducer } from "./tokens/tokensReduce";
 
-export interface TokenState {
-    tokens:string
-}
 
-const initialState ={
-    tokens:""
-}
+const store= createStore(tokenReducer);
 
-export const tokenReducer= (state:TokenState = initialState, action: Action ) => {
-    switch(action.type){
-        case "ADD_TOKEN":{
-            return {tokens: action.payload}
-        }
-        default:
-    
-        return state
-
-    }
-}
+export default store;
