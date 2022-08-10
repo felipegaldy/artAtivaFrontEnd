@@ -1,14 +1,17 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, Box, Button, Typography, TextField} from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
 import './Login.css';
 import UserLogin from '../../models/UserLogin';
+import { useDispatch} from 'react-redux';
+import { addToken } from '../../store/tokens/actions';
 
 function Login() {
   let navigate = useNavigate();
-  const [token, setToken] = useLocalStorage('token');
+  const dispatch = useDispatch();
+  
+  const [token, setToken] = useState('');
   const [userLogin, setUserLogin] = useState<UserLogin>(
       {
         id: 0,
@@ -30,9 +33,10 @@ function Login() {
       }
 
           useEffect(()=>{
-              if(token !== ''){
-                  navigate('/home')
-              }
+            if(token !== ''){
+             dispatch(addToken(token));  
+              navigate('/home')
+          }
           }, [token])
 
       async function onSubmit(e: ChangeEvent<HTMLFormElement>){

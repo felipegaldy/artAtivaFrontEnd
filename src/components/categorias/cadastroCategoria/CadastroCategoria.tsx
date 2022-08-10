@@ -2,8 +2,7 @@ import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroTema.css';
-import useLocalStorage from 'react-use-localstorage';
-import Tema from '../../../models/Categoria';
+import Categoria from '../../../models/Categoria';
 import { buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
@@ -15,7 +14,7 @@ function CadastroCategoria() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
-    const [tema, setCategoria] = useState<Categoria>({
+    const [categoria, setCategoria] = useState<Categoria>({
             id: 0,
             nome: '',
             descricao: ''
@@ -58,7 +57,7 @@ function CadastroCategoria() {
     
             if (id !== undefined) {
                 console.log(categoria)
-                put(`/categorias`, tema, setCategoria, {
+                put(`/categorias`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
@@ -84,9 +83,9 @@ function CadastroCategoria() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="nome" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <TextField value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="descrição" variant="outlined" name="nome" margin="normal" fullWidth />
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro de Categorias</Typography>
+                <TextField value={categoria.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="descricao" label="nome" variant="outlined" name="descricao" margin="normal" fullWidth />
+                <TextField value={categoria.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="nome" label="descrição" variant="outlined" name="nome" margin="normal" fullWidth />
                 
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
@@ -96,4 +95,4 @@ function CadastroCategoria() {
     )
 }
 
-export default CadastroTema;
+export default CadastroCategoria;

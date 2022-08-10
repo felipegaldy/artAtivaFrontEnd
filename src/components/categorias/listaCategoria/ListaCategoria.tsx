@@ -1,15 +1,17 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './ListaTema.css'; 
-import Categoria from '../../../model/Categoria';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box } from '@mui/material'
+import './ListaCategoria.css'
+import Categoria from '../../../models/Categoria';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+import { TokenState } from '../../../store/tokens/tokensReduce';
 
-function ListaTema() {
+
+function ListaCategoria() {
 
   const [categorias, setCategorias] = React.useState<Categoria[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -48,7 +50,7 @@ function ListaTema() {
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="h2">
-              {categoria.categoria}
+              {categoria.nome}
             </Typography>
             <Typography color="textSecondary" gutterBottom>
               {categoria.descricao}
@@ -82,4 +84,4 @@ function ListaTema() {
 }
 
 
-export default ListaTema;
+export default ListaCategoria;
