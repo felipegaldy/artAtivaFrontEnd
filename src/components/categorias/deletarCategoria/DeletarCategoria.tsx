@@ -6,7 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/store';
+import { TokenState } from '../../../store/tokens/tokensReduce';
 
 
 function DeletarCategoria() {
