@@ -8,10 +8,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SobreNos from './pages/sobrenos/SobreNos';
 import CadastroUsuario from './pages/cadastrousuario/CadastroUsuario';
 import { Provider } from 'react-redux';
-import store from './store/store';
 import ListaCategoria from './components/categorias/listaCategoria/ListaCategoria';
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
+import store from './store/store';
 
 function App() {
   return (

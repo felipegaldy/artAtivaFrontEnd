@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { InputBase, Typography } from "@mui/material";
+import { Grid, InputBase, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import PersonIcon from "@mui/icons-material/Person";
@@ -142,7 +142,10 @@ if(token === ""){
    </Box>
  </AppBar>
 }else {
-  navbar = <AppBar position="static"  className="top-app-bar-container">
+  navbar = 
+  <Grid>
+
+  <AppBar position="static"  className="top-app-bar-container">
   <Toolbar className="top-toolbar">
     <Box>
       <Button className="texto-whats botoes-top">
@@ -150,21 +153,29 @@ if(token === ""){
       </Button>
     </Box>
     <Box>
-      <Link to="/login" className="text-decorator-none cursor">
-      <Button onClick={goLogout} className="botoes-top" color="inherit">
-        Logout
-      </Button>
-      </Link>{" "}
-      |{" "}
+    
+      {" "}
       <Link to="/cadastrocategoria" className="text-decorator-none cursor">
       <Button className="botoes-top" color="inherit">
         Cadastrar categoria
       </Button>
       </Link>
+      |
+      <Link to="/categorias" className="text-decorator-none cursor">
+      <Button className="botoes-top" color="inherit">
+        Categoria
+      </Button>
+      </Link>
+      |
+      <Link to="/login" className="text-decorator-none cursor">
+      <Button onClick={goLogout} className="botoes-top" color="inherit">
+        Logout
+      </Button>
+      </Link>{" "}
     </Box>
   </Toolbar>
 </AppBar>
-{/* PARTE 2 DO HEADER COMEÇA AQUI*/}
+{}
 <AppBar position="static" className="app-bar-container" color="inherit">
   <Toolbar className="header-toolbar">
     <Typography
@@ -207,6 +218,7 @@ if(token === ""){
     <Button variant="text" className="botao-nav">Presentes</Button>
   </Box>
 </AppBar>
+</Grid>
 }
 
   return (
