@@ -177,10 +177,7 @@ if(token === ""){
     </Box>
   </Toolbar>
 </AppBar>
-<<<<<<< HEAD
 {}
-=======
->>>>>>> d6b8a7b5317943fe1cbe61dcf2893ce8846c8efd
 <AppBar position="static" className="app-bar-container" color="inherit">
   <Toolbar className="header-toolbar">
     <Typography
