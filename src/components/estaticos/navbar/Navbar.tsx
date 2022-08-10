@@ -164,7 +164,7 @@ if(token === ""){
     </Box>
   </Toolbar>
 </AppBar>
-{/* PARTE 2 DO HEADER COMEÇA AQUI*/}
+/* PARTE 2 DO HEADER COMEÇA AQUI*/
 <AppBar position="static" className="app-bar-container" color="inherit">
   <Toolbar className="header-toolbar">
     <Typography

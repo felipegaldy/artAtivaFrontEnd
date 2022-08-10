@@ -26,9 +26,9 @@ function ListaCategoria() {
     }
   }, [token]);
  
-  const getTemas = async () => {
+  const getCategorias = async () => {
     //adicionar try catch
-    await busca("/tema", setCategorias, {
+    await busca("/categorias", setCategorias, {
     headers: {
       'Authorization':  token
     }
@@ -36,7 +36,7 @@ function ListaCategoria() {
   }
  
   React.useEffect(() => {
-    getTemas();
+    getCategorias();
   } , [categorias.length]);
 
 
