@@ -7,10 +7,13 @@ import Login from './pages/login/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SobreNos from './pages/sobrenos/SobreNos';
 import CadastroUsuario from './pages/cadastrousuario/CadastroUsuario';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
     <>
+    <Provider store={store}>
      <Router>
       <Navbar />
       <Routes>
@@ -23,7 +26,7 @@ function App() {
       <Footer/>
     </Router>
       
-      
+    </Provider>
     </>
 
   );
