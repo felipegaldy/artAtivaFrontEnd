@@ -20,7 +20,7 @@ function ListaCategoria() {
   let navigate = useNavigate();
 
   React.useEffect(() => {
-    if(token == ''){
+    if(token === ''){
       alert("Você precisa estar logado para acessar essa página");
       navigate('/login');
     }
