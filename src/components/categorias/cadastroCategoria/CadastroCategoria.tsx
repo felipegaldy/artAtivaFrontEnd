@@ -1,4 +1,4 @@
-    import React, {useState, useEffect, ChangeEvent} from 'react'
+import React, {useState, useEffect, ChangeEvent} from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroCategoria.css';
