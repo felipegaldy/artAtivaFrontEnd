@@ -76,7 +76,8 @@ function Navbar() {
 var navbar;
 
 if(token === ""){
-   navbar = <AppBar position="static"  className="top-app-bar-container">
+   navbar = <Grid>
+    <AppBar position="static"  className="top-app-bar-container">
    <Toolbar className="top-toolbar">
      <Box>
        <Button className="texto-whats botoes-top">
@@ -141,6 +142,7 @@ if(token === ""){
      <Button variant="text" className="botao-nav">Presentes</Button>
    </Box>
  </AppBar>
+ </Grid>
 }else {
   navbar = 
   <Grid>
@@ -175,7 +177,6 @@ if(token === ""){
     </Box>
   </Toolbar>
 </AppBar>
-
 {}
 <AppBar position="static" className="app-bar-container" color="inherit">
   <Toolbar className="header-toolbar">

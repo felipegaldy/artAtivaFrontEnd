@@ -18,7 +18,7 @@ function DeletarCategoria() {
   const [categorias, setCategoria] = useState<Categoria>()
 
   useEffect(()=>{
-    if(token ==""){
+    if(token ===""){
         alert("Você precisa estar logado")
         navigate('/login')
     }
