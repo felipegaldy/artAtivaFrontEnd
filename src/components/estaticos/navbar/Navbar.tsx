@@ -19,7 +19,7 @@ import {toast} from 'react-toastify';
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: `25px`,
-  border: `1px solid ${theme.palette.grey[800]}`,
+  border: `1px solid #EF8C0A `,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
@@ -89,12 +89,12 @@ if(token === ""){
    navbar = <Grid>
     <AppBar position="static"  className="top-app-bar-container">
    <Toolbar className="top-toolbar">
-     <Box>
+     <Box className="whatsBox" >
        <Button className="texto-whats botoes-top">
          <WhatsAppIcon className="iconeWhats" /> Fale conosco via whatsapp
        </Button>
      </Box>
-     <Box>
+     <Box className="botoesNav" >
        <Link to="/login" className="text-decorator-none cursor">
        <Button className="botoes-top" color="inherit">
          Login
@@ -140,7 +140,7 @@ if(token === ""){
        </Button>
        </Link>{" "}
        |{" "}
-       <Button className="botoes-top botoes-sobrenos-contato" color="inherit">
+       <Button className="botoes-top botoes-sobrenos-contato" variant="text">
          Contato
        </Button>
      </Box>
@@ -159,12 +159,12 @@ if(token === ""){
 
   <AppBar position="static"  className="top-app-bar-container">
   <Toolbar className="top-toolbar">
-    <Box>
+    <Box className="whatsBox">
       <Button className="texto-whats botoes-top">
         <WhatsAppIcon className="iconeWhats" /> Fale conosco via whatsapp
       </Button>
     </Box>
-    <Box>      
+    <Box className="botoesNav">      
       <Link to="/cadastroprodutos" className="text-decorator-none cursor">
       <Button className="botoes-top" color="inherit">
        Cadastro produtos

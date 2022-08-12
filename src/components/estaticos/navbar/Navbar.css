@@ -4,23 +4,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #316D38!important;;   
+    background: #316D38!important;
 }
 .top-toolbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between!important;
     align-items: center;
     width: 100%;
     height: 100%;
     max-width: 1120px;
+}
+.whatsBox{
+    width: 30%;
+    padding: 0!important;
+    margin: 0;
 }
 .iconeWhats{
     margin-right: 5px;
     font-size: 14px!important;
 }
 .botoes-top{
-    font-size: 12px!important;
+    width: 100%;
+    font-size: 8px!important;
     color: white!important;
+}
+.botoesNav{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 /* 2 parte do navbar */
@@ -28,6 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center; 
+    color: #EF8C0A!important;
     /* background-color: aliceblue!important;
     color: #222!important; */
 }
@@ -40,11 +53,13 @@
     margin-top: -10px;
     margin-right: 80px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end!important;
+    align-items: center;
 }
 .botoes-sobrenos-contato {
-    color: #222!important;
+    color: #EF8C0A!important;
     border-radius: 25px!important;
+    width: 100px!important;
 }
 .header-toolbar{
     display: flex;
@@ -68,11 +83,14 @@
     width: 100%;
     height: 100%;
     max-width: 1120px;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
 }
 .botao-nav{
-    border: 2px solid #D9D9D9!important;
+    border: 2px solid #EF8C0A!important;
+    color: #EF8C0A!important;
     border-radius: 20px!important;
     width: 135px!important;
     height: 30px!important;
+    font-size: 12px!important;
+    text-transform: none!important;
 }
