@@ -1,81 +1,78 @@
-import * as React from 'react'
-import { Link } from 'react-router-dom'
-import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Button, Card, CardActions, CardContent, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/material'
-import './ListaCategoria.css'
-import Categoria from '../../../models/Categoria';
-import { useNavigate } from 'react-router-dom';
-import { busca } from '../../../services/Service';
-import { Grid } from '@mui/material';
+import * as React from 'react'
 import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom'
+import Produto from '../../../models/Produto';
+import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReduce';
 import {toast} from 'react-toastify';
 
-
-function ListaCategoria() {
-
-  const [categorias, setCategorias] = React.useState<Categoria[]>([]);
+function ListaProduto() {
+  const [produtos, setProduto] = React.useState<Produto[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
   let navigate = useNavigate();
 
+
   React.useEffect(() => {
     if(token === ''){
-      toast.error("Você precisa estar logado para acessar as Categorias", {
+      toast.error("Você precisa estar logado", {
         position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover:false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-    });
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover:false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+      });
       navigate('/login');
     }
   }, [token]);
- 
-  const getCategorias = async () => {
+
+  const getProdutos = async () => {
     //adicionar try catch
-    await busca("/categorias", setCategorias, {
+    await busca("/produtos", setProduto, {
     headers: {
       'Authorization':  token
     }
   });
-  }
- 
+}
   React.useEffect(() => {
-    getCategorias();
-  } , [categorias.length]);
+    getProdutos();
+  } , [produtos.length]);
+
+  
 
 
 
   return (
     <>
-    <Grid container spacing={3} className='container-tema'> 
+    <Grid container spacing={3} className='container-produto'> 
     {
-      categorias.map(categoria => (
-      <Box className='box-tema' m={2} > 
+      produtos.map(produto => (
+      <Box className='box-produto' m={2} > 
         <Card variant="outlined">
           <CardContent>
             <Typography variant="h5" component="h2">
-              {categoria.nome}
+              {produto.nome}
             </Typography>
             <Typography color="textSecondary" gutterBottom>
-              {categoria.descricao}
+              {produto.descricao}
             </Typography>
           </CardContent>
           <CardActions>
-            <Box className='box-tema-botoes' mb={1.5} >
-              <Link to={`/cadastrocategoria/${categoria.id}`} className="text-decorator-none">
+            <Box className='box-produto-botoes' mb={1.5} >
+              <Link to={`/cadastroprodutos/${produto.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="botao-tema botao-atualizar" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/deletarcategoria/${categoria.id}`} className="text-decorator-none">
+              <Link to={`/deletarprodutos/${produto.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="botao-tema " size='small' color="secondary">
                     deletar
@@ -90,8 +87,7 @@ function ListaCategoria() {
       }
     </Grid> 
     </>
-  );
+  )
 }
 
-
-export default ListaCategoria;
+export default ListaProduto

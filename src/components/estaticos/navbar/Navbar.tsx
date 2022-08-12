@@ -154,8 +154,20 @@ if(token === ""){
         <WhatsAppIcon className="iconeWhats" /> Fale conosco via whatsapp
       </Button>
     </Box>
-    <Box>
-    
+    <Box>      
+      <Link to="/cadastroprodutos" className="text-decorator-none cursor">
+      <Button className="botoes-top" color="inherit">
+       Cadastro produtos
+      </Button>
+      </Link>
+      |
+      {" "}
+      <Link to="/produtos" className="text-decorator-none cursor">
+      <Button className="botoes-top" color="inherit">
+       Produtos
+      </Button>
+      </Link>
+      |
       {" "}
       <Link to="/cadastrocategoria" className="text-decorator-none cursor">
       <Button className="botoes-top" color="inherit">
