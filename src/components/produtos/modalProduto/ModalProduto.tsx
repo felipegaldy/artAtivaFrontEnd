@@ -3,7 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import { Box, Button, Modal } from '@mui/material';
 import CloseIcon from '@material-ui/icons/Close';
 import CadastroProduto from '../cadastroProduto/CadastroProduto';
-import './ModalProduto.css'
+import './ModalProduto.css';
 
     function getModalStyle() {
         const top = 50 ;

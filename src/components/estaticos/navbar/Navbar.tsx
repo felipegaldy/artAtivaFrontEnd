@@ -157,9 +157,17 @@ if(token === ""){
     <Box>      
       <Link to="/cadastroprodutos" className="text-decorator-none cursor">
       <Button className="botoes-top" color="inherit">
-        produtos
+       Cadastro produtos
       </Button>
       </Link>
+      |
+      {" "}
+      <Link to="/produtos" className="text-decorator-none cursor">
+      <Button className="botoes-top" color="inherit">
+       Produtos
+      </Button>
+      </Link>
+      |
       {" "}
       <Link to="/cadastrocategoria" className="text-decorator-none cursor">
       <Button className="botoes-top" color="inherit">

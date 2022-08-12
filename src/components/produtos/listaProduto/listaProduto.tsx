@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
 import { busca } from '../../../services/Service';
 import { TokenState } from '../../../store/tokens/tokensReduce';
+import {toast} from 'react-toastify';
 
 function ListaProduto() {
   const [produtos, setProduto] = React.useState<Produto[]>([]);
@@ -17,7 +18,16 @@ function ListaProduto() {
 
   React.useEffect(() => {
     if(token === ''){
-      alert("Você precisa estar logado para acessar essa página");
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover:false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined,
+      });
       navigate('/login');
     }
   }, [token]);

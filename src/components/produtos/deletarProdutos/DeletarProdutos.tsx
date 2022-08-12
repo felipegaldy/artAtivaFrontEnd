@@ -23,13 +23,13 @@ function DeletarProdutos() {
         if (token == "") {
             toast.info("Você precisa estar logado!", {
                 position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "dark",
-                progress: undefined,
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
             });
             navigate("/login");
         }
@@ -59,13 +59,13 @@ function DeletarProdutos() {
         });
         toast.success("Produto deletado com sucesso", {
             position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "dark",
-            progress: undefined,
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover:false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
         });
     }
     const nao = () => {
