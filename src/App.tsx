@@ -13,12 +13,13 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import store from './store/store';
 import ListaProduto from './components/produtos/listaProduto/listaProduto';
+import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
 
 function App() {
   return (
     <>
     <Provider store={store}>
-     <Router>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -31,6 +32,7 @@ function App() {
         <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
         <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
         <Route path="/produtos" element={<ListaProduto />} />
+        <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
       </Routes>
       <Footer/>
     </Router>
