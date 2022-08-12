@@ -15,11 +15,11 @@ function Home() {
           <Carrosel/>
         </Grid>
         <Grid item xs={12} className="title-container">
-          <hr> </hr>
+          <hr /> 
           <Typography variant="h5" component="h1" className="title-produtos" >
                 Quero levar para casa
           </Typography>
-          <hr></hr>
+          <hr />
         </Grid>
         <Grid item xs={3}>
           <Paper elevation={3} > <CardProduto /> </Paper>

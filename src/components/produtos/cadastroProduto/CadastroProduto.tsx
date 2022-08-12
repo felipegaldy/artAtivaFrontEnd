@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
-import './CadastroPost.css';
+import './CadastroProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
@@ -8,7 +8,6 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReduce';
-
 
 
 
