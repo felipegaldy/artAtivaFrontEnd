@@ -9,6 +9,7 @@ import { busca } from '../../../services/Service';
 import { Grid } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReduce';
+import {toast} from 'react-toastify';
 
 
 function ListaCategoria() {
@@ -21,7 +22,16 @@ function ListaCategoria() {
 
   React.useEffect(() => {
     if(token === ''){
-      alert("Você precisa estar logado para acessar essa página");
+      toast.error("Você precisa estar logado para acessar as Categorias", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover:false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
       navigate('/login');
     }
   }, [token]);

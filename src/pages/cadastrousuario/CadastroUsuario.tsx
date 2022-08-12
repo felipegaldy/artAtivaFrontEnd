@@ -13,6 +13,7 @@ import Container from '@material-ui/core/Container';
 import './CadastroUsuario.css';
 import Usuario from "../../models/Usuario";
 import { cadastroUsuario } from "../../services/Service";
+import {toast} from 'react-toastify';
 
 
 
@@ -99,21 +100,58 @@ function CadastroUsuario() {
       //Tenta executar o cadastro
       try {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-        alert("Usuário cadastrado com sucesso");
+        toast.success("Usuario cadastrado com sucesso", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover:false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+      });
 
         //Se houver erro, pegue o Erro e retorna uma msg
       } catch (error) {
         console.log(`Error: ${error}`);
-
         //Pode modificar a msg de acordo com o erro
-        alert("Usuário já existente");
+        toast.error("Usuário já existente", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover:false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+      });
       }
     } else if (confirmarSenha !== user.senha) {
-      alert("As senhas não combinam."); // Mensagem que indica que as senham nao são iguai
-
+      // Mensagem que indica que as senham nao são iguai
+      toast.error("As senhas não combinam.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover:false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
       // Reinicia o campo de Confirmar Senha
     } else {
-      alert("Insira no miníno 8 caracteres na senha."); // Mensagem que indica a quantidade minima de caracteres
+      // Mensagem que indica a quantidade minima de caracteres
+      toast.error("Insira no miníno 8 caracteres na senha.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover:false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+    });
+      
       setUser({ ...user, senha: "" }); // Reinicia o campo de Senha
       setConfirmarSenha("");
     }

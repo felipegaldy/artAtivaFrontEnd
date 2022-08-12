@@ -13,29 +13,32 @@ import CadastroCategoria from './components/categorias/cadastroCategoria/Cadastr
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import store from './store/store';
 import ListaProduto from './components/produtos/listaProduto/listaProduto';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
-    <Provider store={store}>
-     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/sobrenos" element={<SobreNos/>}/>
-        <Route path="/cadastrousuario" element={<CadastroUsuario/>}/>
-        <Route path="/categorias" element={<ListaCategoria />} />
-        <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
-        <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
-        <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-        <Route path="/produtos" element={<ListaProduto />} />
-      </Routes>
-      <Footer/>
-    </Router>
-      
-    </Provider>
+      <Provider store={store}>
+        < ToastContainer />
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sobrenos" element={<SobreNos />} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+            <Route path="/categorias" element={<ListaCategoria />} />
+            <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
+            <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/produtos" element={<ListaProduto />} />
+          </Routes>
+          <Footer />
+        </Router>
+
+      </Provider>
     </>
 
   );
