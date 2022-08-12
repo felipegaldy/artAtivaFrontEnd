@@ -10,4 +10,4 @@ interface Produto {
     data: string
 }
 
-export default Categoria;
+export default Produto;
