@@ -1,9 +1,9 @@
 import React from 'react'
 
-function listaProduto() {
+function ListaProduto() {
   return (
     <div>listaProduto</div>
   )
 }
 
-export default listaProduto
+export default ListaProduto
