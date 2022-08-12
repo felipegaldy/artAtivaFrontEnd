@@ -135,7 +135,9 @@ if(token === ""){
        </Button>
      </Box>
    <Box className="nav-botoes">
-     <Button variant="text" className="botao-nav">Roupas</Button>
+    <Link to="/deletarproduto" className="text-decorator-none cursor">
+     <Button variant="text" className="botao-nav"> DeletarProdutos </Button>
+    </Link>
      <Button variant="text" className="botao-nav">Decoração</Button>
      <Button variant="text" className="botao-nav">Destaques</Button>
      <Button variant="text" className="botao-nav">Para Casa</Button>
@@ -213,7 +215,9 @@ if(token === ""){
       </Button>
     </Box>
   <Box className="nav-botoes">
-    <Button variant="text" className="botao-nav">Roupas</Button>
+    <Link to="/produtos" className="text-decorator-none cursor">
+     <Button variant="text" className="botao-nav">Produtos</Button>
+    </Link>
     <Button variant="text" className="botao-nav">Decoração</Button>
     <Button variant="text" className="botao-nav">Destaques</Button>
     <Button variant="text" className="botao-nav">Para Casa</Button>
