@@ -12,13 +12,18 @@ import ListaCategoria from './components/categorias/listaCategoria/ListaCategori
 import CadastroCategoria from './components/categorias/cadastroCategoria/CadastroCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
 import store from './store/store';
+<<<<<<< HEAD
 import ListaProduto from './components/produtos/listaProduto/ListaProduto';
+=======
+import ListaProduto from './components/produtos/listaProduto/listaProduto';
+import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
+>>>>>>> 77323ef0d7e454e3eea4462e2871a0974e394c3d
 
 function App() {
   return (
     <>
     <Provider store={store}>
-     <Router>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -31,6 +36,7 @@ function App() {
         <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
         <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
         <Route path="/produtos" element={<ListaProduto />} />
+        <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
       </Routes>
       <Footer/>
     </Router>
