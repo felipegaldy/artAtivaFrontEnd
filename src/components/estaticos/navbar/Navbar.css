@@ -105,17 +105,18 @@
     height: 100%;
     max-width: 1120px;
     margin-bottom: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
     
 }
 .botao-nav{
     border: 2px solid #EF8C0A!important;
     color: #EF8C0A!important;
     border-radius: 20px!important;
-    width: 115px!important;
+    width: 120px!important;
     height: 25px!important;
-    font-size: 12px!important;
+    font-size: 12.5px!important;
     text-transform: none!important;
+    
 }
 
 .logo{
