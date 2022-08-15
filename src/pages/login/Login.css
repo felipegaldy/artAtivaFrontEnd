@@ -30,3 +30,9 @@
 .bg-image {
     background-image: url(https://i.imgur.com/28r3kFN.png);
 }
+
+.grid-login-container {
+    width: 1120px;
+    height: 500px;
+    background-image: url(https://i.imgur.com/28r3kFN.png);
+}
