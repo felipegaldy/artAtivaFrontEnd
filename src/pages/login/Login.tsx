@@ -75,7 +75,8 @@ function Login() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        className="grid-login-container bg-image"
+        className="grid-login-container"
+        xs={12}
       >
 
         <Box paddingX={20} className="login-box">

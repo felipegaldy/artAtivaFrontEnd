@@ -210,7 +210,9 @@ function Navbar() {
               component="div"
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             >
-              <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="" />
+              <Link to="/home">
+                <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="Logo da empresa" />
+              </Link>
             </Typography>
             <Search className="search">
               <SearchIconWrapper>
