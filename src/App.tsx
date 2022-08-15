@@ -22,29 +22,29 @@ import CadastroProduto from './components/produtos/cadastroProduto/CadastroProdu
 function App() {
   return (
     <>
-    <Provider store={store}>
-    < ToastContainer />
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/sobrenos" element={<SobreNos/>}/>
-        <Route path="/cadastrousuario" element={<CadastroUsuario/>}/>
-        <Route path="/categorias" element={<ListaCategoria />} />
-        <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
-        <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
-        <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-        <Route path="/produtos" element={<ListaProduto />} />
-        <Route path="/cadastroprodutos" element={<CadastroProduto />} />
-        <Route path="/cadastroprodutos/:id" element={<CadastroProduto />} />
-        <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
+      <Provider store={store}>
+        < ToastContainer />
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/sobrenos" element={<SobreNos />} />
+            <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+            <Route path="/categorias" element={<ListaCategoria />} />
+            <Route path="/cadastrocategoria" element={<CadastroCategoria />} />
+            <Route path="/cadastrocategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/produtos" element={<ListaProduto />} />
+            <Route path="/cadastroprodutos" element={<CadastroProduto />} />
+            <Route path="/cadastroprodutos/:id" element={<CadastroProduto />} />
+            <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
 
-      </Routes>
-      <Footer/>
-    </Router>
-    </Provider>
+          </Routes>
+          <Footer />
+        </Router>
+      </Provider>
     </>
 
   );
