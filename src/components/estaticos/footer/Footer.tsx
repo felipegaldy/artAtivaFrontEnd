@@ -9,8 +9,36 @@ import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import "./Footer.css"; 
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReduce";
+import { addToken } from "../../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Footer() {
+  
+  let history = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>((state) => state.tokens);
+  const dispatch = useDispatch();
+
+  function goLogout() {
+      dispatch(addToken(''));
+      toast.info('Usuário deslogado!', {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+      });
+      history('/login')
+  }
+
+  if (token != "") {
+
+  }
   return (
     <>
       <Grid
