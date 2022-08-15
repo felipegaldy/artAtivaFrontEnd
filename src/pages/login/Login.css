@@ -1,11 +1,12 @@
-.grid-login-container{
-    margin: 10px!important;
+.grid-login-container {
+    margin: 10px !important;
 }
-.login-container{
+
+.login-container {
     margin: 10px auto;
 }
 
-.login-box{
+.login-box {
     width: 600px;
     height: 400px;
     padding: 10px;
@@ -16,12 +17,16 @@
     border-radius: 20px;
 }
 
-.botao-login{
-    width: 135px!important;
-    height: 30px!important;
-    border-radius: 25px!important;
+.botao-login {
+    width: 135px !important;
+    height: 30px !important;
+    border-radius: 25px !important;
 }
 
-.login-title{
-    margin-top: 32px!important;
+.login-title {
+    margin-top: 32px !important;
+}
+
+.bg-image {
+    background-image: url(https://i.imgur.com/28r3kFN.png);
 }
