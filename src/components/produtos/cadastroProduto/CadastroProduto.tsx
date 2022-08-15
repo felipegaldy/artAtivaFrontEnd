@@ -23,9 +23,7 @@ import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import OutlinedInput from "@material-ui/core/OutlinedInput";
-import InputAdornment from "@material-ui/core/InputAdornment";
+import AddIcon from '@material-ui/icons/Add';
 
 function Copyright() {
   return (
@@ -189,7 +187,7 @@ function CadastroProduto() {
           <CssBaseline />
           <div className={classes.paper}>
             <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
+              <AddIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
               Cadastrar
