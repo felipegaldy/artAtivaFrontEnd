@@ -40,7 +40,6 @@ function App() {
             <Route path="/cadastroprodutos" element={<CadastroProduto />} />
             <Route path="/cadastroprodutos/:id" element={<CadastroProduto />} />
             <Route path="/deletarprodutos/:id" element={<DeletarProdutos />} />
-
           </Routes>
           <Footer />
         </Router>
