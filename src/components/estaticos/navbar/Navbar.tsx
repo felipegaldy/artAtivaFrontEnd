@@ -87,8 +87,8 @@ function Navbar() {
 
   if (token === "") {
     navbar = <Grid>
-      <AppBar position="static" className="top-app-bar-container">
-        <Toolbar className="top-toolbar">
+      <AppBar position="static" className="top-app-bar-container" >
+        <Toolbar className="top-toolbar" >
           <Box className="whatsBox" >
             <Button className="texto-whats botoes-top">
               <WhatsAppIcon className="iconeWhats" /> Fale conosco via whatsapp
@@ -118,9 +118,11 @@ function Navbar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Link to="/home">
-              <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="Logo da empresa" />
+            <Box >
+            <Link to="/home" >
+              <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="Logo da empresa" className='logo'/>
             </Link>
+            </Box>
           </Typography>
           <Search className="search">
             <SearchIconWrapper>
@@ -142,9 +144,11 @@ function Navbar() {
             </Button>
           </Link>{" "}
           |{" "}
+          <Link to='/contato' className="text-decorator-none cursor">
           <Button className="botoes-top botoes-sobrenos-contato" variant="text">
-            Contato
+            Contato 
           </Button>
+          </Link>
         </Box>
         <Box className="nav-botoes">
           <Button variant="text" className="botao-nav">Roupas</Button>

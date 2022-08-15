@@ -50,7 +50,7 @@
 .box-botoes-sobrenos-contato{
     max-width: 1120px;
     width: 100%;
-    margin-top: -10px;
+    margin-top: 5px;
     margin-right: 80px;
     display: flex;
     justify-content: flex-end!important;
@@ -71,26 +71,34 @@
 }
 
 .icones{
-    margin-right: 25px;
+    margin-right: 20px;
     margin-left: 5px;
-    font-size: 36px!important;
+    font-size: 30px!important;
+    margin-bottom: 10px !important;
+    margin-top: 20px !important;
 }
 
 .nav-botoes{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 60%;
     height: 100%;
     max-width: 1120px;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 .botao-nav{
     border: 2px solid #EF8C0A!important;
     color: #EF8C0A!important;
     border-radius: 20px!important;
-    width: 135px!important;
-    height: 30px!important;
+    width: 115px!important;
+    height: 25px!important;
     font-size: 12px!important;
     text-transform: none!important;
+}
+
+.logo{
+    image-rendering: optimizeQuality !important;
+    width: 30px !important;
 }
