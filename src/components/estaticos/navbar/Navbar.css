@@ -25,8 +25,9 @@
 }
 .botoes-top{
     width: 100%;
-    font-size: 8px!important;
+    font-size: 10px!important;
     color: white!important;
+    text-transform: none;
 }
 .botoesNav{
     width: 65%;
@@ -45,21 +46,39 @@
     color: #222!important; */
 }
 .search{
-    margin-right: 32px;
+    margin-right: 24px;
+    margin-top: 10px !important;
+    width: 250px !important;
+    height: 30px !important;
 }
+
+.buscar{
+    font-size: 12px !important;
+}
+
 .box-botoes-sobrenos-contato{
     max-width: 1120px;
     width: 100%;
     margin-top: 5px;
-    margin-right: 80px;
+    margin-right: 90px;
     display: flex;
     justify-content: flex-end!important;
     align-items: center;
+    text-transform: none;
 }
 .botoes-sobrenos-contato {
     color: #EF8C0A!important;
     border-radius: 25px!important;
-    width: 100px!important;
+    width: 120px!important;
+    text-transform: none !important;
+    font-size: 12px !important;
+}
+.botoes-sobrenos-contato-cont {
+    color: #EF8C0A!important;
+    border-radius: 25px!important;
+    width: 80px!important;
+    text-transform: none !important;
+    font-size: 12px !important;
 }
 .header-toolbar{
     display: flex;
@@ -74,7 +93,7 @@
     margin-right: 20px;
     margin-left: 5px;
     font-size: 30px!important;
-    margin-bottom: 10px !important;
+    margin-bottom: 5px !important;
     margin-top: 20px !important;
 }
 
@@ -85,8 +104,9 @@
     width: 60%;
     height: 100%;
     max-width: 1120px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    
 }
 .botao-nav{
     border: 2px solid #EF8C0A!important;
@@ -100,5 +120,7 @@
 
 .logo{
     image-rendering: optimizeQuality !important;
-    width: 30px !important;
+    width: 160px !important;
+    margin-top: 30px !important;
+    margin-left: 30px !important;
 }

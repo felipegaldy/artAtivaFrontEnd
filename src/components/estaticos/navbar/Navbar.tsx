@@ -128,7 +128,7 @@ function Navbar() {
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
-            <StyledInputBase
+            <StyledInputBase className="buscar"
               placeholder="Buscar..."
               inputProps={{ "aria-label": "search" }}
             />
@@ -139,13 +139,13 @@ function Navbar() {
         </Toolbar>
         <Box className="box-botoes-sobrenos-contato">
           <Link to="/sobrenos" className="text-decorator-none cursor">
-            <Button className="botoes-top botoes-sobrenos-contato" variant="text" >
+            <Button className="botoes-sobrenos-contato" variant="text" >
               Quem somos
             </Button>
           </Link>{" "}
           |{" "}
           <Link to='/contato' className="text-decorator-none cursor">
-          <Button className="botoes-top botoes-sobrenos-contato" variant="text">
+          <Button className="botoes-sobrenos-contato-cont" variant="text">
             Contato 
           </Button>
           </Link>
@@ -215,14 +215,14 @@ function Navbar() {
               sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             >
               <Link to="/home">
-                <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="Logo da empresa" />
+                <img src="https://images-ext-2.discordapp.net/external/zHKaw0ij_SdecgNwb3GbHXqvHyuYKxWvM7fkGCVmPw8/https/i.imgur.com/UGVgV8w.png" alt="Logo da empresa" className="logo"/>
               </Link>
             </Typography>
             <Search className="search">
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
-              <StyledInputBase
+              <StyledInputBase className="buscar"
                 placeholder="Buscar..."
                 inputProps={{ "aria-label": "search" }}
               />
@@ -233,14 +233,16 @@ function Navbar() {
           </Toolbar>
           <Box className="box-botoes-sobrenos-contato">
             <Link to="/sobrenos" className="text-decorator-none cursor">
-              <Button className="botoes-top botoes-sobrenos-contato" variant="text" >
+              <Button className="botoes-sobrenos-contato" variant="text" >
                 Quem somos
               </Button>
             </Link>{" "}
             |{" "}
-            <Button className="botoes-top botoes-sobrenos-contato" color="inherit">
+            <Link to='/contato' className="text-decorator-none cursor">
+            <Button className="botoes-sobrenos-contato-cont" color="inherit">
               Contato
             </Button>
+            </Link>
           </Box>
           <Box className="nav-botoes">
             <Button variant="text" className="botao-nav">Roupas</Button>
