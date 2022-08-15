@@ -255,6 +255,7 @@ function CadastroUsuario() {
                   label="Data de Nascimento"
                   name="dataNascimento"
                   type="date"
+                  InputLabelProps={{ shrink: true }}
                 />
               </Grid>
             </Grid>
