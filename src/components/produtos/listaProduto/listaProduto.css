@@ -11,11 +11,16 @@
 .box-produto{
     display: flex;
     margin-top: 15px;
-    max-width: 20%;
+    max-width: 28%;
     height: auto!important;
+}
+.box-produto:hover{
+    border: 2px solid red;
+    border-radius: 2%;
 }
 .box-produto-botoes{
     display: flex;
+    width: 100px;
 
 }
 
