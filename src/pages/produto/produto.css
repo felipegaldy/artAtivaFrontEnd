@@ -91,8 +91,84 @@ input[type="number"] {
 
 }
 
-.quemCriou{
+.tituloDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
     background: #fff;
     border: 2px solid #EF8C0A;
     border-radius: 25px;
+    padding: 10px;
+    margin-left: 20px;
+    color: #F04644;
+    height: 30px;
+}
+
+.conteudoDiv{
+    background: #fff;
+    border: 2px solid #EF8C0A;
+    border-radius: 25px;
+    position: relative;
+    padding: 20px;
+}
+.selo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.descricao{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.containerSobrePoliticas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.m-l20{
+    margin-left: 20px;
+}
+
+.avaliacoes, .talvezVoceGoste{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.comentario{
+    background: #fff;
+    border: 2px solid #EF8C0A;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 32px;
+}
+
+.descricaoComentario{
+    width: 90%;
+    font-size: 12px;
+}
+.avaliacoesComentarios{
+    padding: 10px;
+}
+
+.produtosRecomendados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
 }

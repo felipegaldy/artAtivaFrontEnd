@@ -12,9 +12,10 @@ import { TokenState } from "../../store/tokens/tokensReduce";
 function Home() {
 
   const [produtos, setProduto] = useState<Produto[]>([]);
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
+  const token = "Basic ZmVsaXBlMkBlbWFpbC5jb206MTIzNDU2Nzg5";
+  // const token = useSelector<TokenState, TokenState["tokens"]>(
+  //   (state) => state.tokens
+  // );
 
   const getProdutos = async () => {
     //adicionar try catch
