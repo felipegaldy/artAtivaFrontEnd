@@ -37,7 +37,7 @@ function Footer() {
 
   var footerComponent;
 
-  if (token != "") {
+  if (token != "" || token == "") {
     footerComponent = <AppBar position="static">
       <Grid
         container

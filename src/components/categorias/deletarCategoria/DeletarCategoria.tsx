@@ -73,34 +73,20 @@ function DeletarCategoria() {
           
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined">
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar a Categoria:
-              </Typography>
-              <Typography color="textSecondary">
-                {categorias?.descricao}
-              </Typography>
-            </Box>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
-              </Box>
-              <Box mx={2}>
-                <Button  onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
-              </Box>
-            </Box>
-          </CardActions>
-        </Card>
-      </Box>
+      <div className="deletarProduto">
+        <div className="cardDeletarContainer">
+          <div className="textoEProduto">
+              <h2 className="tituloDeletar">Deseja deletar Categoria?</h2>
+              <div className="nomeCategoria">
+                  <h1 className='tituloCategoriaDeletar'>{categorias?.nome}</h1>
+              </div>
+          </div>
+          
+            <button onClick={sim} className="botaoSim">Sim</button>
+            <button onClick={nao} className="botaoNao">Não</button>
+            </div>
+      </div>
+
     </>
   );
 }
