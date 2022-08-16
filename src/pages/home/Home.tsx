@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Grid, Box, Typography, Button } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import './Home.css';
-import { Paper } from "@material-ui/core";
 import Carrosel from "../../components/carrosel/Carousel";
 import CardProduto from "../../components/cardproduto/CardProduto";
 import { busca } from "../../services/Service";
@@ -51,6 +50,7 @@ React.useEffect(() => {
             descricao={produto.descricao} 
             preco={produto.preco}
             imagem={produto.foto}
+            id={produto.id}
             /> 
         </Grid>
         ))}

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.secondary.main,
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -190,7 +190,7 @@ function CadastroProduto() {
               <AddIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Cadastrar
+              Cadastrar Produto
             </Typography>
             <form onSubmit={onSubmit} className={classes.form} noValidate>
               <Grid container spacing={2}>
@@ -308,7 +308,7 @@ function CadastroProduto() {
                   type="submit"
                   variant="contained"
                   fullWidth
-                  color="primary"
+                  color="secondary"
                   className={classes.submit}
                 >
                   Cadastrar

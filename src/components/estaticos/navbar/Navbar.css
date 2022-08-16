@@ -42,8 +42,8 @@
     justify-content: center;
     align-items: center; 
     color: #EF8C0A!important;
-    /* background-color: aliceblue!important;
-    color: #222!important; */
+    background: transparent!important;
+    box-shadow: none!important;
 }
 .search{
     margin-right: 24px;

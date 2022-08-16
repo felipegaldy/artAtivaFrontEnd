@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, Box, Button, Typography, TextField, Paper } from "@mui/material";
-import { Link, useNavigate } from "react-router-dom";
+import { Grid, Box, Button, Typography } from "@mui/material";
 import "./SobreNos.css";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";

@@ -1,0 +1,98 @@
+.produto{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.sessaoTopo{
+    width: 100%;
+    display: flex;
+}
+.imagemProduto{
+    flex: 2;
+    padding: 20px;
+}
+.imagemProdutoMini{
+    margin: 10px 20px 0 0;
+}      
+.resumoProduto{
+    flex: 3;
+    padding: 20px;
+}
+
+.imagemAnunciante{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.comprarProduto{
+    margin-top: 10px;
+}
+
+.preco{
+    margin-left: 10px;
+}
+
+.quantidade{
+    background: #fff;
+    border: 2px solid #EF8C0A;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    width: 270px;
+    height: 33px;
+    font-size: 24px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+}
+.adicionar, .remover{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+    text-shadow: 0px 5px 5px rgba(0,0,0,);
+}
+.quantidade > input{
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-right: 2px solid #EF8C0A;
+    border-left: 2px solid #EF8C0A;
+}
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }
+.btnComprar{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.sessaoInfos{
+
+}
+
+.quemCriou{
+    background: #fff;
+    border: 2px solid #EF8C0A;
+    border-radius: 25px;
+}
