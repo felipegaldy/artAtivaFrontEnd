@@ -1,9 +1,31 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import CardProduto from "../../components/cardproduto/CardProduto";
+import { buscaId } from "../../services/Service";
 import "./produto.css";
 
 export const Produto = () => {
   const [quantidade, setQuantidade] = useState(0);
+  const { id } =  useParams<{id: string}>();
+  const [produto, setProduto] = useState<any>();
+
+  const nomeUsuario = "";
+
+  const token = "Basic ZmVsaXBlMkBlbWFpbC5jb206MTIzNDU2Nzg5";
+
+  useEffect(()=>{
+    if(id!== undefined){
+        findById(id)
+    }
+  }, [id])
+
+  async function findById(id: string){
+    buscaId(`/produtos/${id}`, setProduto,{
+        headers: {
+            'Authorization': token
+        }
+    })
+  }
 
   const adicionar = () => {
     setQuantidade(quantidade + 1);
@@ -16,6 +38,9 @@ export const Produto = () => {
     if (quantidade < 1) {
       setQuantidade(1);
     }
+    if (quantidade > produto?.quantidade) {
+      setQuantidade(produto?.quantidade);
+    }
   }, [quantidade]);
 
   return (
@@ -23,7 +48,8 @@ export const Produto = () => {
       <div className="produto">
         <div className="sessaoTopo">
           <div className="imagemProduto">
-            <img src="https://via.placeholder.com/450" alt="Produto" />
+            <img className="imagemProdutoPrincipal" src={produto?.foto ? produto?.foto : "https://via.placeholder.com/450"} alt={produto?.nome} />
+            {/* <img src="https://via.placeholder.com/450" alt="Produto" /> */}
             <img
               src="https://via.placeholder.com/90"
               className="imagemProdutoMini"
@@ -41,23 +67,20 @@ export const Produto = () => {
             />
           </div>
           <div className="resumoProduto">
-            <h1 className="title">lorer ipsum</h1>
+            <h1 className="title">{produto?.nome}</h1>
             <p className="descricao">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quis
-              facilis officia enim sed quibusdam quas, ipsum ea nostrum soluta
-              dolor mollitia qui illo quam dolore, suscipit dicta ducimus
-              architecto.
+              {produto?.descricao}
             </p>
             <div className="imagemAnunciante">
               <img
                 className="avatar"
-                src="https://via.placeholder.com/90"
+                src={produto?.usuario?.foto ? produto?.usuario?.foto : "https://via.placeholder.com/90"}
                 alt="avatar"
               />
-              <h2 className="nomeAnunciante">Ong Marias</h2>
+              <h2 className="nomeAnunciante">{produto?.usuario?.nome}</h2>
             </div>
             <div className="comprarProduto">
-              <h4 className="preco">R$ {100 * quantidade},00</h4>
+              <h4 className="preco">R$ {produto?.preco * quantidade},00</h4>
               <div className="quantidade">
                 <div className="adicionar" onClick={adicionar}>
                   +
@@ -68,7 +91,7 @@ export const Produto = () => {
                 </div>
               </div>
               <button className="btnComprar">Comprar</button>
-              <p className="categoria">Categoria: Roupas</p>
+              <h4 className="categoria">Categoria: {produto?.categoria?.nome} </h4>
             </div>
           </div>
         </div>
@@ -79,10 +102,10 @@ export const Produto = () => {
               <div className="imagemAnunciante">
                 <img
                   className="avatar"
-                  src="https://via.placeholder.com/90"
+                  src={produto?.usuario?.foto ? produto?.usuario?.foto : "https://via.placeholder.com/90"}
                   alt="avatar"
                 />
-                <h2 className="nomeAnunciante">Ong Marias</h2>
+                <h2 className="nomeAnunciante">{produto?.usuario?.nome}</h2>
                 <img
                   src="https://i.imgur.com/cihSNjX.jpeg"
                   alt="selo-feito-a-mao"
@@ -101,12 +124,9 @@ export const Produto = () => {
             <div className="sobreProduto">
             <div className="tituloDiv">Sobre o produto</div>
             <div className="conteudoDiv">
-              <h2 className="tituloSobreProduto nomeAnunciante">lorem ipsum</h2>
+              <h2 className="tituloSobreProduto nomeAnunciante">{produto?.nome}</h2>
               <p className="descricao">
-                Mussum Ipsum, cacilds vidis litro abertis. Admodum accumsan disputationi eu sit.
-                Vide electram sadipscing et per.Cevadis im ampola pa arma uma pindureta.
-                Posuere libero varius. Nullam a nisl ut ante blandit hendrerit.
-                Aenean sit amet nisi.In elementis mé pra quem é amistosis quis leo.
+                {produto?.descricao}
               </p>
             </div>
             </div>

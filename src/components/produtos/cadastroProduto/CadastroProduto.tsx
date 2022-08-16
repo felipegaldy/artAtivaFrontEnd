@@ -126,6 +126,12 @@ function CadastroProduto() {
     });
   };
 
+  useEffect(() => {
+    if(produto.quantidade < 0){
+      alert("Quantidade não pode ser menor que 0")
+    }
+  } , [produto.quantidade]);
+
   function updatedProduto(e: ChangeEvent<HTMLInputElement>) {
     setProduto({
       ...produto,

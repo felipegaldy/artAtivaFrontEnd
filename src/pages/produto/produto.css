@@ -11,6 +11,11 @@
     flex: 2;
     padding: 20px;
 }
+
+.imagemProdutoPrincipal{
+    width: 450px;
+    height: 450px;
+}
 .imagemProdutoMini{
     margin: 10px 20px 0 0;
 }      
@@ -102,7 +107,7 @@ input[type="number"] {
     padding: 10px;
     margin-left: 20px;
     color: #F04644;
-    height: 30px;
+    height: fit-content;
 }
 
 .conteudoDiv{
