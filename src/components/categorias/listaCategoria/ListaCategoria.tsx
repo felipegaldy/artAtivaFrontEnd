@@ -53,42 +53,22 @@ function ListaCategoria() {
 
   return (
     <>
-    <Grid container spacing={3} className='container-tema'> 
-    {
-      categorias.map(categoria => (
-      <Box className='box-tema' m={2} > 
-        <Card variant="outlined">
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              {categoria.nome}
-            </Typography>
-            <Typography color="textSecondary" gutterBottom>
-              {categoria.descricao}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Box className='box-tema-botoes' mb={1.5} >
+      <div className="listaCategorias">
+        {categorias.map((categoria: Categoria) => (
+          <div className="cardCategoria">
+            <h1 className="tituloCategoria">{categoria.nome}</h1>
+            <h4>{categoria.descricao}</h4>
+            <div className="boxBotoes">
               <Link to={`/cadastrocategoria/${categoria.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" className="botao-tema botao-atualizar" size='small' color="primary" >
-                    atualizar
-                  </Button>
-                </Box>
-              </Link>
-              <Link to={`/deletarcategoria/${categoria.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button variant="contained" className="botao-tema " size='small' color="secondary">
-                    deletar
-                  </Button>
-                </Box>
-              </Link>
-            </Box>
-          </CardActions>
-        </Card>
-      </Box>
-      ))
-      }
-    </Grid> 
+                  <button className="botaoEditar">Editar</button>
+                </Link>
+                <Link to={`/deletarcategoria/${categoria.id}`} className="text-decorator-none">
+                  <button className="botaoDeletar">Deletar</button>
+                </Link>
+              </div>
+          </div>
+          ))}
+      </div>
     </>
   );
 }

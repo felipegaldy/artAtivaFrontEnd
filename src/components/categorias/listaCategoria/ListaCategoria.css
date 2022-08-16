@@ -1,24 +1,22 @@
-.text-decorator-none{
-    text-decoration: none;
-}
-.container-tema{
+.listaCategorias{
+    max-width: 1120px;
+    margin: 32px auto;
     display: flex;
-    padding: 3rem;
-    gap: 1rem;
-    justify-content: flex-start;
     flex-wrap: wrap;
-}
-.box-tema{
-    display: flex;
-    margin-top: 15px;
-    max-width: 20%;
-    height: auto!important;
-}
-.box-tema-botoes{
-    display: flex;
-
+    gap: 20px;
 }
 
-.botao-atualizar{
-    margin-right: 10px!important;
+.cardCategoria{
+    border: 2px solid #EF8C0A;
+    background: #fff;
+    width: 250px;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tituloCategoria{
+    font-size: 24px;
 }

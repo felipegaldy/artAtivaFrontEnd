@@ -17,6 +17,7 @@ import { TokenState } from "../../../store/tokens/tokensReduce";
 import { toast } from "react-toastify";
 import "./listaProduto.css";
 import CardProduto from "../../cardproduto/CardProduto";
+import { NONAME } from "dns";
 
 function ListaProduto() {
   const [produtos, setProduto] = React.useState<Produto[]>([]);
@@ -65,6 +66,7 @@ function ListaProduto() {
                 preco={produto.preco}
                 imagem={produto.foto}
                 id={produto.id}
+                className="cardProdutoLista"
               />
               <div className="boxBotoes">
                 <Link
