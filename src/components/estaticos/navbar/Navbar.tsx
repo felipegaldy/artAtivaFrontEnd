@@ -151,11 +151,26 @@ function Navbar() {
           </Link>
         </Box>
         <Box className="nav-botoes">
+          <Link  to='/categorias/{acessorios}'>
+          <Button variant="text" className="botao-nav">Acessorios</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{roupas}' >
           <Button variant="text" className="botao-nav">Roupas</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{decoracao}' >
           <Button variant="text" className="botao-nav">Decoração</Button>
-          <Button variant="text" className="botao-nav">Destaques</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{paracasa}' >
           <Button variant="text" className="botao-nav">Para Casa</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{presentes}' >
           <Button variant="text" className="botao-nav">Presentes</Button>
+          </Link>
+
         </Box>
       </AppBar>
     </Grid>
@@ -245,11 +260,25 @@ function Navbar() {
             </Link>
           </Box>
           <Box className="nav-botoes">
-            <Button variant="text" className="botao-nav">Roupas</Button>
-            <Button variant="text" className="botao-nav">Decoração</Button>
-            <Button variant="text" className="botao-nav">Destaques</Button>
-            <Button variant="text" className="botao-nav">Para Casa</Button>
-            <Button variant="text" className="botao-nav">Presentes</Button>
+          <Link  to='/categorias/nome/{acessorios}'>
+          <Button variant="text" className="botao-nav">Acessorios</Button>
+          </Link>
+
+          <Link to='/categorias/{roupas}' >
+          <Button variant="text" className="botao-nav">Roupas</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{decoracao}' >
+          <Button variant="text" className="botao-nav">Decoração</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{paracasa}' >
+          <Button variant="text" className="botao-nav">Para Casa</Button>
+          </Link>
+
+          <Link to='/categorias/nome/{presentes}' >
+          <Button variant="text" className="botao-nav">Presentes</Button>
+          </Link>
           </Box>
         </AppBar>
       </Grid>
