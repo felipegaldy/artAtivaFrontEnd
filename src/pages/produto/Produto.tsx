@@ -65,7 +65,9 @@ export const Produto = () => {
           </div>
         </div>
         <div className="sessaoInfos">
-          <div className="quemCriou">quem criou?</div>
+          <div className="quemCriou">
+            quem criou?
+          </div>
           <div className="sobreProduto">sobre o produto</div>
           <div className="politicasEntrega">politicas entrega</div>
         </div>
