@@ -15,7 +15,7 @@ function CardProduto({nome, descricao, preco, imagem, id=0} : any) {
           <img src={imagem ? imagem : "https://via.placeholder.com/150"} alt={nome} />
         </div>
         <CardContent className="cardDescricao">
-          <Typography  variant="h6">
+          <Typography variant="h6">
             {nome}
           </Typography>
           <Typography variant="body2" color="text.secondary">
