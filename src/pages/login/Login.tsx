@@ -1,5 +1,4 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import { Grid, Box, Button, Typography, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from '../../services/Service';
 import './Login.css';
@@ -70,76 +69,29 @@ function Login() {
 
   return (
     <>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        className="grid-login-container"
-        xs={12}
-      >
-
-        <Box paddingX={20} className="login-box">
-          <form onSubmit={onSubmit}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="login-title"
-            >
-              Login
-            </Typography>
-            <TextField
-              value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="usuario"
-              label="Digite seu email"
-              variant="outlined"
-              name="usuario"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              id="senha"
-              label="Senha"
-              variant="outlined"
-              name="senha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <Box marginTop={2} textAlign="center">
-
-              <Button type="submit" variant="contained" color="primary" className="botao-login">
-                Logar
-              </Button>
-
-            </Box>
-          </form>
-          <Box display="flex"
-            justifyContent="center"
-            marginTop={2}
-            className="text-cadastra-se">
-            <Box marginRight={2}>
-              <Typography variant="subtitle2" gutterBottom align="center">
-                Não tem uma conta?
-              </Typography>
-            </Box>
-            <Link to="/cadastrousuario">
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                align="center"
-                className=""
-              >
-                Cadastre-se
-              </Typography>
-            </Link>
-          </Box>
-        </Box>
-      </Grid>
+      <div className="login">
+        <div className="login-container">
+          <div className="login-header">
+            <h1>Login</h1>
+          </div>
+          <div className="login-body">
+            <form className='formLogin' onSubmit={onSubmit}>
+              <div className="login-input">
+                <label className='labelLogin' htmlFor="usuario">Usuario</label>
+                <input className='inputLogin' type="text" name="usuario" placeholder="email@email.com" onChange={updatedModel} />
+                <label className='labelLogin' htmlFor="senha">Senha</label>
+                <input className='inputLogin' type="password" name="senha" placeholder="" onChange={updatedModel} />
+              </div>
+              <div className="login-button">
+                <button className='botaoEntrar' type="submit">Entrar</button>
+              </div>
+            </form>
+          </div>
+          <div className="login-footer">
+            <p className="subtexto">Não tem uma conta? <Link className='link' to="/cadastrousuario">Cadastre-se</Link></p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

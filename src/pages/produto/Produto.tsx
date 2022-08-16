@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import CardProduto from "../../components/cardproduto/CardProduto";
 import { buscaId } from "../../services/Service";
+import { TokenState } from "../../store/tokens/tokensReduce";
 import "./produto.css";
 
 export const Produto = () => {
   const [quantidade, setQuantidade] = useState(0);
   const { id } =  useParams<{id: string}>();
   const [produto, setProduto] = useState<any>();
-
-  const nomeUsuario = "";
+  
 
   const token = "Basic ZmVsaXBlMkBlbWFpbC5jb206MTIzNDU2Nzg5";
 
@@ -20,7 +21,7 @@ export const Produto = () => {
   }, [id])
 
   async function findById(id: string){
-    buscaId(`/produtos/${id}`, setProduto,{
+    await buscaId(`/produtos/${id}`, setProduto,{
         headers: {
             'Authorization': token
         }
@@ -42,6 +43,8 @@ export const Produto = () => {
       setQuantidade(produto?.quantidade);
     }
   }, [quantidade]);
+
+  console.log(produto?.usuario?.nome)
 
   return (
     <>
@@ -77,7 +80,7 @@ export const Produto = () => {
                 src={produto?.usuario?.foto ? produto?.usuario?.foto : "https://via.placeholder.com/90"}
                 alt="avatar"
               />
-              <h2 className="nomeAnunciante">{produto?.usuario?.nome}</h2>
+              <h2 className="nomeAnunciante">{produto?.usuario?.nome ? produto?.usuario?.nome : "Ong Marias" }</h2>
             </div>
             <div className="comprarProduto">
               <h4 className="preco">R$ {produto?.preco * quantidade},00</h4>
@@ -105,7 +108,7 @@ export const Produto = () => {
                   src={produto?.usuario?.foto ? produto?.usuario?.foto : "https://via.placeholder.com/90"}
                   alt="avatar"
                 />
-                <h2 className="nomeAnunciante">{produto?.usuario?.nome}</h2>
+                <h2 className="nomeAnunciante">{produto?.usuario?.nome ? produto?.usuario?.nome : "Ong Marias" }</h2>
                 <img
                   src="https://i.imgur.com/cihSNjX.jpeg"
                   alt="selo-feito-a-mao"
