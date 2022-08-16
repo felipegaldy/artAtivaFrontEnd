@@ -15,8 +15,17 @@
     margin-top: 50px;
   }
   
-  hr {
-    background-color: #222;
-    height: 2px;
-    width: 30%;
+.tituloInicialHome{
+  font-size: 24px !important;
+  align-items: center;
+  justify-content: center;
+  color: #F04644;
+  padding-left: 300px !important;
+  padding-right: 300px !important;
+}
+
+.linhaHome {
+    border: 1px solid #EF8C0A!important;
+    width: 180px;
+    background-color: #EF8C0A!important;
   }
