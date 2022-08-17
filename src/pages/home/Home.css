@@ -38,7 +38,8 @@
 }
 
 .quemSomosTopo{
-  background: #F8EFD4;
+  background: #fff;
+  border: #EF8C0A 2px solid;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -46,11 +47,13 @@
   align-items: center;
   border-radius: 25px;
   margin-top: 80px;
+  margin-bottom: 50px;
   width: 900px;
 }
 
 .titleQuemSomosHome{
   color: #316D38;
+  margin: 0;
 }
 
 .subTitleQuemSomosHome{
