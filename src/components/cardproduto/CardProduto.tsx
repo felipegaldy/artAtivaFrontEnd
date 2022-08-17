@@ -31,7 +31,7 @@ function CardProduto({nome, descricao, preco, imagem, id=0} : any) {
         </Button>
       </Link>
         <Typography variant="body2" color="text.secondary" className="preco">
-            R${preco},00
+            R${preco}
         </Typography>
       </CardActions>
     </Card>
