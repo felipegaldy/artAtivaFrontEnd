@@ -55,6 +55,44 @@ React.useEffect(() => {
             /> 
         </Grid>
         ))}
+        <div className="quemSomos">
+          <div className="quemSomosTopo">
+            <h1 className="titleQuemSomosHome">Quem Somos</h1>
+            <h4 className="subTitleQuemSomosHome">Vem dar uma olhada na nossa equipe</h4>
+            <button className="saibaMais">Saiba Mais</button>
+          </div>
+          <div className="quemSomosBottom">
+            <div className="quemSomosCard">
+              <img src="https://avatars.githubusercontent.com/u/102499242?v=4" alt="" />
+              <div className="cardBottomQuemSomos">
+                <button className="saibaMaisBottom">Saiba Mais</button>
+              </div>
+            </div>
+            <div className="quemSomosCard">
+              <img src="https://avatars.githubusercontent.com/u/106316122?v=4" alt="" />
+              <div className="cardBottomQuemSomos">
+                <button className="saibaMaisBottom">Saiba Mais</button>
+              </div>
+            </div>
+            <div className="quemSomosCard">
+              <img src="https://avatars.githubusercontent.com/u/105821392?v=4" alt="" />
+              <div className="cardBottomQuemSomos">
+                <button className="saibaMaisBottom">Saiba Mais</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="talvezVoceGoste talvezVoceGosteHome">
+          <hr className="linha" />
+          <div className="tituloInicial">Recomendados</div>
+          <hr className="linha" />
+        </div>
+        <div className="produtosRecomendados produtosRecomendadosHome">
+            <CardProduto nome={"Produto"} descricao={"descricao"} preco={25} />
+            <CardProduto nome={"Produto"} descricao={"descricao"} preco={25} />
+            <CardProduto nome={"Produto"} descricao={"descricao"} preco={25} />
+            <CardProduto nome={"Produto"} descricao={"descricao"} preco={25} />
+        </div>
       </Grid>
       
     </>

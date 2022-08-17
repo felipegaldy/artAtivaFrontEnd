@@ -7,15 +7,18 @@ import { TokenState } from "../../store/tokens/tokensReduce";
 import "./produto.css";
 
 export const Produto = () => {
+
   const [quantidade, setQuantidade] = useState(0);
   const { id } =  useParams<{id: string}>();
   const [produto, setProduto] = useState<any>();
-  
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
-  const token = "Basic ZmVsaXBlMkBlbWFpbC5jb206MTIzNDU2Nzg5";
+  // const token = "Basic ZmVsaXBlMkBlbWFpbC5jb206MTIzNDU2Nzg5";
 
   useEffect(()=>{
-    if(id!== undefined){
+    if(id !== undefined){
         findById(id)
     }
   }, [id])
@@ -44,7 +47,7 @@ export const Produto = () => {
     }
   }, [quantidade]);
 
-  console.log(produto?.usuario?.nome)
+  console.log(produto?.usuario?.nome);
 
   return (
     <>
@@ -77,7 +80,7 @@ export const Produto = () => {
             <div className="imagemAnunciante">
               <img
                 className="avatar"
-                src={produto?.usuario?.foto ? produto?.usuario?.foto : "https://via.placeholder.com/90"}
+                src={produto.usuario?.foto ? produto.usuario?.foto : "https://via.placeholder.com/90"}
                 alt="avatar"
               />
               <h2 className="nomeAnunciante">{produto?.usuario?.nome ? produto?.usuario?.nome : "Ong Marias" }</h2>
