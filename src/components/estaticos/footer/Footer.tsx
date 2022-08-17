@@ -1,19 +1,44 @@
-import { Grid, Box, Typography, Button } from "@mui/material";
+import { Grid, Box, Typography, AppBar } from "@mui/material";
 import React from "react";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
-import TextField from "@material-ui/core/TextField";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import "./Footer.css";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReduce";
+import { addToken } from "../../../store/tokens/actions";
+import { toast } from "react-toastify";
 
 function Footer() {
-  return (
-    <>
+  let history = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>((state) => state.tokens);
+  const dispatch = useDispatch();
+
+  function goLogout() {
+    dispatch(addToken(''));
+    toast.info('Usuário deslogado!', {
+      position: "top-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: undefined,
+    });
+    history('/login')
+  }
+
+  var footerComponent;
+
+  if (token != "" || token == "") {
+    footerComponent = <AppBar position="static">
       <Grid
         container
         direction="row"
@@ -67,16 +92,12 @@ function Footer() {
               <Typography variant="h6" className="footer-title">
                 Receba nossas notícias
               </Typography>
-              <Typography variant="body1" className="footer-text">
-                <TextField
-                  id="outlined-basic"
-                  label="Email"
-                  variant="outlined"
-                />
-                <Button variant="contained" className="botao-assinar">
-                  <ArrowForwardIcon />
-                </Button>
-              </Typography>
+              <div className="assine">
+                <input type="email" placeholder="Digite seu email" className="inputAssine" />
+                <button>
+                  <ArrowForwardIcon className="iconButton" />
+                </button>
+              </div>
             </Box>
             <Box className="redes-box">
               <Typography variant="h6" className="footer-title">
@@ -84,15 +105,11 @@ function Footer() {
               </Typography>
               <Box className="redes-icones-box">
 
-                  <InstagramIcon className="footer-icon redes-icon" />
+                <InstagramIcon className="footer-icon redes-icon" />
+                <FacebookIcon className="footer-icon redes-icon" />
+                <LinkedInIcon className="footer-icon redes-icon" />
 
-
-                  <FacebookIcon className="footer-icon redes-icon" />
-
-
-                  <LinkedInIcon className="footer-icon redes-icon" />
-
-                </Box>
+              </Box>
             </Box>
           </Box>
         </Grid>
@@ -104,6 +121,12 @@ function Footer() {
           </Box>
         </Grid>
       </Grid>
+    </AppBar>
+  }
+
+  return (
+    <>
+      {footerComponent}
     </>
   );
 }

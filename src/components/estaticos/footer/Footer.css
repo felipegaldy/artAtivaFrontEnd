@@ -1,55 +1,97 @@
 a {
     text-decoration: none;
 }
-.footer{
-    background: #9e9e9e;
+
+.footer {
+    background: #FAF0D2;
+    color: #326E37;
 }
 
-.footer-box{
+.footer-box {
     display: flex;
     justify-content: space-between;
     width: 1120px;
-    padding: 2rem;
-    margin: 32px auto;
+    margin: 0 auto;
+    padding: 20px;
 }
-.footer-title{
-    font-size: 1.5rem!important;
-    font-weight: bold!important;
-    margin-bottom: 1rem!important;
+
+.footer-title {
+    font-size: 20px !important;
+    font-weight: bold !important;
+    margin-bottom: 5px !important;
 }
-.footer-text{
-    display: flex!important;
-    align-items: center!important;
-    margin-bottom: 1rem!important;
+
+.footer-text {
+    font-size: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 12px !important;
 }
+
 .footer-icon {
-    margin-right: 10px!important;
+    margin-right: 5px !important;
 }
-.footer-subtext{
-    margin-top: -1rem!important;
+
+.footer-subtext {
+    margin-top: -1rem !important;
 }
-.pagamentos-box{
-    margin-bottom: 50px!important;
+
+.pagamentos-box {
+    margin-bottom: 30px !important;
 }
-.botao-assinar{
-    margin-left: 5px!important;
-}
-.redes-icones-box{
+
+.assine {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem!important;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    height: 30px;
+    width: 90%;
+    margin-bottom: 20px;
 }
-.redes-icon{
-    font-size: 36px!important;
+
+.inputAssine {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+button {
+    background-color: #F08C0A;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F08C0A90;
+}
+
+.redes-icones-box {
+    display: flex;
+}
+
+.redes-icon {
+    font-size: 30px !important;
 }
 
 /* copyright */
-.footer-copy{
+.footer-copy {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    background: #E6E6E6;
+    background: #326E37;
+    color: #fff;
     border-radius: 25px 25px 0px 0px;
-    height: 45px!important;
+    height: 35px !important;
+}
+
+.cop {
+    font-size: 12px !important;
 }

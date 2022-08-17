@@ -1,13 +1,13 @@
 .carrosel-container{
-    max-width: 1120px;
-    margin: 0 auto!important;
-    height: 320px!important;
-    margin-top: -50px!important;
+  max-width: 1120px;
+  margin: 0 auto!important;
+  height: 320px!important;
+  margin-top: -50px!important;
 }
 
 .img-carrosel{
-    border-radius: 25px 25px 25px 25px!important;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  border-radius: 25px 25px 25px 25px!important;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
