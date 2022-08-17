@@ -21,7 +21,7 @@ function SobreNos() {
         <Box className="cardCompleto">
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQGxSIvhVXB69A/profile-displayphoto-shrink_800_800/0/1659149033289?e=1665014400&v=beta&t=6SEDZLQ_kRk2sjiuhbS3bDe6U4lwYl6sNpXtaElSISY"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -56,7 +56,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEQJegmzXihzw/profile-displayphoto-shrink_800_800/0/1647425416180?e=1665014400&v=beta&t=1FtjDEhGOFIKr2kQ_oomKK51NvH88Fuw_U4gqFpYD7I"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -64,8 +64,8 @@ function SobreNos() {
             </Button>
             <Box className="boxTexto">
               <Typography className="text-sobrenos">
-                Desenvolvedor de software trainee, cursando o 4 semestre de gestão da
-                tecnologia da informação na Fatec de Franco da Rocha.
+                Desenvolvedor full stack trainee, cursando o 4 semestre de gestão da tecnologia da informação na Fatec de Franco da Rocha.
+                Atuo com Java e ReactJS + Typescript, também estou estudando Nodejs.  
               </Typography>
               <Box className="redessociais">
                 <a href="https://www.linkedin.com/in/felipesilveirasp/overlay/contact-info/" target="_blank" rel="noopener noreferrer"  className="redessociais">
@@ -86,7 +86,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEMjUfTMFt9pw/profile-displayphoto-shrink_800_800/0/1566680216478?e=1665014400&v=beta&t=ji96xADiYbVhk1cHfe4vsDHVu2YHf581XGOIz4Hg2Rk"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -118,7 +118,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQHNu4WbuKYSDw/profile-displayphoto-shrink_800_800/0/1658838501880?e=1665014400&v=beta&t=YbLPVFJjH0dwqqBceA_yFtrxaNifoK1J0rZfmtNnppw"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -150,7 +150,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEh8Wyx6WI7qA/profile-displayphoto-shrink_800_800/0/1654045375745?e=1665014400&v=beta&t=LIgyK4SzVKo-RrVTcCtJhiGwzyLXKGU2F423L8jvzMU"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -181,7 +181,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4D03AQEmsCWHIoFQrg/profile-displayphoto-shrink_800_800/0/1625076494079?e=1665014400&v=beta&t=o7tJKHED4Sga9s7Cwj01D4d9l999TXgMbXANQOFkweA"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
@@ -212,7 +212,7 @@ function SobreNos() {
           <img
             src="https://media-exp1.licdn.com/dms/image/C4E03AQEAI5hDRB2W-Q/profile-displayphoto-shrink_800_800/0/1637800682157?e=1665014400&v=beta&t=ZiZF7QO4IEYYV1xDYnSnKIPqEZpjjamj343LZPrPw5o"
             alt="avatar"
-            className="avatar"/>
+            className="avatarSobreNos"/>
 
           <Box className="card-fulano">
             <Button variant="outlined" className="boxNome">
