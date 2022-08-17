@@ -84,7 +84,7 @@ export const Produto = () => {
               <h2 className="nomeAnunciante">{produto?.usuario?.nome ? produto?.usuario?.nome : "Ong Marias" }</h2>
             </div>
             <div className="comprarProduto">
-              <h4 className="preco">R$ {produto?.preco * quantidade},00</h4>
+              <h4 className="preco">R${produto?.preco * quantidade}</h4>
               <div className="quantidade">
                 <div className="adicionar" onClick={adicionar}>
                   +
