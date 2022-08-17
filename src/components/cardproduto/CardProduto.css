@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 225px;
     height: max-content;
+
 }
 .cardTopo{
     display: flex;
@@ -40,10 +41,14 @@
 }
 
 .cardProdutoContainer:hover{
+    transition: all 0.5s ease-in-out;
     box-shadow: 0px 0px 10px  #EF8C0A90;;
-    
+    transform: scale(1.05);
+    background-color: #fff!important;
 }
-
+.cardDescricao:hover, .cardTopo:hover{
+    background-color: #fff!important;
+}
 .btnVerProduto{
     background-color: transparent!important;
     color: #316D38!important;
