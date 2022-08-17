@@ -43,7 +43,7 @@
 .cardProdutoContainer:hover{
     transition: all 0.5s ease-in-out;
     box-shadow: 0px 0px 10px  #EF8C0A90;;
-    transform: scale(1.05);
+    transform: scale(1.03);
     background-color: #fff!important;
 }
 .cardDescricao:hover, .cardTopo:hover{

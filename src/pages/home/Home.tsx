@@ -7,6 +7,7 @@ import { busca } from "../../services/Service";
 import Produto from "../../models/Produto";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReduce";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -59,7 +60,9 @@ React.useEffect(() => {
           <div className="quemSomosTopo">
             <h1 className="titleQuemSomosHome">Quem Somos</h1>
             <h4 className="subTitleQuemSomosHome">Vem dar uma olhada na nossa equipe</h4>
-            <button className="saibaMais">Saiba Mais</button>
+            
+            <button className="saibaMais"><Link to="/sobrenos" className="text-decorator-none cursor linkSaiba" >Saiba Mais</Link></button>
+            
           </div>
           <div className="quemSomosBottom">
             <div className="quemSomosCard">
