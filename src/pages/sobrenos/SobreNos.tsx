@@ -64,9 +64,9 @@ function SobreNos() {
             </Button>
             <Box className="boxTexto">
               <Typography className="text-sobrenos">
-                Desenvolvedor full stack, cursando o 4 semestre de gestão da tecnologia da informação na Fatec de Franco da Rocha.
-                Atuo com Java + SpringBoot e ReactJS + Typescript. Sou uma pessoa organizada que tem facilicidade para aprender novas tecnologias, 
-                sou determinado gosto de me comunicar e sou um pessoal que gosta de trabalhar em equipe.
+                Desenvolvedor Full Stack, cursando o 4 semestre de gestão da tecnologia da informação na Fatec de Franco da Rocha.
+                Atuo com Java + SpringBoot e ReactJS + Typescript. Sou uma pessoa organizada, aprendo rápido e
+                sou determinado.
               </Typography>
               <Box className="redessociais">
                 <a href="https://www.linkedin.com/in/felipesilveirasp/overlay/contact-info/" target="_blank" rel="noopener noreferrer"  className="redessociais">
