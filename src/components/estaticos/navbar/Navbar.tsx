@@ -9,12 +9,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReduce";
 import { addToken } from "../../../store/tokens/actions";
 import { toast } from 'react-toastify';
+import { buscaNome } from "../../../services/Service";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -64,9 +65,25 @@ function Navbar() {
 
   let navigate = useNavigate();
   const dispatch = useDispatch();
+  const { categoria } =  useParams<{categoria: string}>();
+  const [categorias, setCategorias] = React.useState<any>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+
+  React.useEffect(()=>{
+    if(categoria !== undefined || categoria != ""){
+        findByNome(`${categoria}`);
+    }
+  }, [categoria])
+
+  async function findByNome(categoria: string){
+    buscaNome(`/categorias/nome/${categoria}`, setCategorias,{
+        headers: {
+            'Authorization': token
+        }
+    })
+  }
 
   function goLogout() {
     dispatch(addToken(''));
@@ -151,7 +168,7 @@ function Navbar() {
           </Link>
         </Box>
         <Box className="nav-botoes">
-          <Link  to='/categorias/{acessorios}'>
+          <Link  to='/categorias/nome/{acessorios}'>
           <Button variant="text" className="botao-nav">Acessorios</Button>
           </Link>
 
@@ -264,7 +281,7 @@ function Navbar() {
           <Button variant="text" className="botao-nav">Acessorios</Button>
           </Link>
 
-          <Link to='/categorias/{roupas}' >
+          <Link to={`/categorias/nome/${categoria}`} >
           <Button variant="text" className="botao-nav">Roupas</Button>
           </Link>
 

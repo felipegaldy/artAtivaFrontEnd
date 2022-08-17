@@ -15,7 +15,7 @@ function CardProduto({nome, descricao, preco, imagem, id=0} : any) {
         <div className="cardImagem">
           <img src={imagem ? imagem : "https://via.placeholder.com/150"} alt={nome} />
         </div>
-        <CardContent className="cardDescricao">
+        <CardContent className="cardDescricao" >
           <Typography variant="h6">
             {nome}
           </Typography>
@@ -26,7 +26,7 @@ function CardProduto({nome, descricao, preco, imagem, id=0} : any) {
       </CardActionArea>
       <CardActions className="cardBottom" >
       <Link to={`/produto/${id}`} className="text-decorator-none">
-        <Button size="small" color="primary">
+        <Button className="btnVerProduto">
           Ver
         </Button>
       </Link>

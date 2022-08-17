@@ -140,6 +140,7 @@ function CadastroProduto() {
     });
   }
 
+
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -242,6 +243,7 @@ function CadastroProduto() {
                     label="Preço"
                     name="preco"
                     type="number"
+                    placeholder="0.00"
                     required
                     variant="outlined"
                     margin="normal"

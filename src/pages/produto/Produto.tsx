@@ -21,7 +21,7 @@ export const Produto = () => {
   }, [id])
 
   async function findById(id: string){
-    await buscaId(`/produtos/${id}`, setProduto,{
+    buscaId(`/produtos/${id}`, setProduto,{
         headers: {
             'Authorization': token
         }
